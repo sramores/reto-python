@@ -1,5 +1,6 @@
 import os
 
-path = '/home/sergio/Descargas'
+user = os.getlogin()
+path = '/home/' + user + '/Descargas'
 
-os.listdir(path)
+print(os.listdir(path))
