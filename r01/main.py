@@ -1,3 +1,5 @@
 import os
 
-os.listdir('/home/Descargas')
+path = '/home/sergio/Descargas'
+
+os.listdir(path)
