@@ -1,6 +1,8 @@
-import os
+import os, glob
 
 user = os.getlogin()
-path = '/home/' + user + '/Descargas'
+path = r'/home/' + user + '/Descargas/'
+directory = os.listdir(path)
 
-print(os.listdir(path))
+for file in directory:
+    print(file)
