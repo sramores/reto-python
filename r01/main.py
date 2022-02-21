@@ -1,8 +1,10 @@
-import os, glob
+import os
 
-user = os.getlogin()
-path = r'/home/' + user + '/Descargas/'
+cmd = "xdg-user-dir DOWNLOAD"
+
+path = os.popen(cmd).read().strip()
 directory = os.listdir(path)
 
 for file in directory:
-    print(file)
+    if os.path.isfile(path + "/" + file):
+        print(file)
